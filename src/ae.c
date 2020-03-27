@@ -109,8 +109,7 @@ void aeSetDontWait(aeEventLoop *eventLoop, int noWait) {
 /* Resize the maximum set size of the event loop.
  * If the requested set size is smaller than the current set size, but
  * there is already a file descriptor in use that is >= the requested
- * set size minus one, AE_ERR is returned and the operation is not
- * performed at all.
+ * set size, AE_ERR is returned and the operation is not performed at all.
  *
  * Otherwise AE_OK is returned and the operation is successful. */
 int aeResizeSetSize(aeEventLoop *eventLoop, int setsize) {
